@@ -69,40 +69,7 @@ class _ProfileState extends State<Profile> {
                 });
               },
             ),
-            const SizedBox(height: 16.0),
-            const Text(
-              'Dietary Preference',
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8.0),
-            Row(
-              children: [
-                Radio(
-                  value: 'Vegetarian',
-                  groupValue: dietPreference,
-                  onChanged: (value) {
-                    setState(() {
-                      dietPreference = value.toString();
-                    });
-                  },
-                ),
-                const Text('Vegetarian'),
-                const SizedBox(width: 16.0),
-                Radio(
-                  value: 'Non-vegetarian',
-                  groupValue: dietPreference,
-                  onChanged: (value) {
-                    setState(() {
-                      dietPreference = value.toString();
-                    });
-                  },
-                ),
-                const Text('Non-vegetarian'),
-              ],
-            ),
+          
             const SizedBox(height: 32.0),
             Center(
               child: ElevatedButton(
