@@ -17,7 +17,7 @@ class PickUp extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'PICKUP PERSONNAL DETAILS',
+                  'PICKUP PERSONNEL DETAILS',
                   style: TextStyle(fontSize: 30),
                 )),
             Padding(
