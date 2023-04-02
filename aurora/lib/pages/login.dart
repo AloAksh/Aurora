@@ -1,8 +1,16 @@
 import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
 
-class LogIn extends StatelessWidget {
+class LogIn extends StatefulWidget {
   const LogIn({super.key});
+
+  @override
+  State<LogIn> createState() => _LogInState();
+}
+
+class _LogInState extends State<LogIn> {
+  final mail = TextEditingController();
+  final passwrd = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +31,7 @@ class LogIn extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
               child: TextFormField(
+                controller: mail,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Enter your Email id',
@@ -32,6 +41,7 @@ class LogIn extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
               child: TextFormField(
+                controller: passwrd,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Enter your password',
@@ -46,10 +56,7 @@ class LogIn extends StatelessWidget {
                         const Color.fromRGBO(47, 155, 142, 1)),
                   ),
                   onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Home()));
+                    Navigator.pushNamed(context, '/chooseOpt');
                   },
                   child: const Padding(
                     padding: EdgeInsets.all(15),
@@ -81,3 +88,6 @@ class LogIn extends StatelessWidget {
     );
   }
 }
+
+
+

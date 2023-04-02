@@ -1,7 +1,4 @@
-import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
-
-const List<String> list = <String>['NGO / Charity', 'Restaurant'];
 
 class ChooseOption extends StatelessWidget {
  
@@ -16,28 +13,50 @@ class ChooseOption extends StatelessWidget {
           children: [
              Container(
                 alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(20),
                 child: const Text(
                   'How would you like to continue',
-                  style: TextStyle(fontSize: 30),
-                )),
-
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-                child: DropdownButtonExample(),
-              ),
-
+                  style: TextStyle(fontSize: 25,),
+                )
+                ),
+                const SizedBox(),
                 Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                 child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                      const Color.fromRGBO(47, 155, 142, 1)),
+                ),
                 onPressed: ()
                 {
-                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Profile()));
+                   Navigator.pushNamed(context, '/res_profile');
                 },
                 child: const Padding(
                     padding: EdgeInsets.all(15),
                     child:Text(
-                    'Continue',
+                    'RESTAURANT',
+                    style: TextStyle(fontSize: 20),
+                    
+                    ),
+                )
+                
+              ),
+              ),
+                Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromRGBO(47, 155, 142, 1)),
+                  ),
+                onPressed: ()
+                {
+                   Navigator.pushNamed(context, '/char_profile');
+                },
+                child: const Padding(
+                    padding: EdgeInsets.all(15),
+                    child:Text(
+                    'NGO / CHARITY',
                     style: TextStyle(fontSize: 20),
                     
                     ),
@@ -56,43 +75,6 @@ class ChooseOption extends StatelessWidget {
   
   
 }
-class DropdownButtonExample extends StatefulWidget {
-  const DropdownButtonExample({super.key});
-
-  @override
-  State<DropdownButtonExample> createState() => _DropdownButtonExampleState();
-}
-
-class _DropdownButtonExampleState extends State<DropdownButtonExample> {
-  String dropdownValue = list.first;
-
-  @override
-  Widget build(BuildContext context) {
-    return DropdownButton<String>(
-      value: dropdownValue,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Color.fromARGB(255, 5, 5, 5)),
-      underline: Container(
-        height: 2,
-        color: const Color.fromARGB(255, 19, 122, 84),
-      ),
-      onChanged: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
-    );
-  }
-}
-
 
 
 

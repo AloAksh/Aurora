@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class RestProfile extends StatefulWidget {
-  const RestProfile({super.key});
+class CharProfile extends StatefulWidget {
+  const CharProfile({super.key});
 
   @override
-  State<RestProfile> createState() => _ProfileState();
+  State<CharProfile> createState() => _CharProfileState();
 }
 
-class _ProfileState extends State<RestProfile> {
+class _CharProfileState extends State<CharProfile> {
   String name = '';
   String location = '';
   String dietPreference = '';
@@ -111,6 +111,7 @@ class _ProfileState extends State<RestProfile> {
                 child: const Text('Save'),
                 onPressed: () {
                   // Save profile information here
+                   Navigator.pushNamed(context, '/donateDet');
                 },
               ),
             ),

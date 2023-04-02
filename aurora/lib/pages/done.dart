@@ -1,4 +1,3 @@
-import "package:aurora/pages/donateRestDet.dart";
 import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
 
@@ -14,10 +13,8 @@ class Done extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                child: Image.asset('assets/booked.gif',
+                Image.asset('assets/booked.gif',
                 height: 400.0, width: 250.0, alignment: Alignment.topRight),
-              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
