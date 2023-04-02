@@ -10,3 +10,4 @@ export 'done.dart';
 export 'chooseopt.dart';
 export 'donateRestDet.dart';
 export 'res_profile.dart';
+export 'charity_card.dart';

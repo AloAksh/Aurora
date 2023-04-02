@@ -25,7 +25,7 @@ class Done extends StatelessWidget {
                     child: const Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        'BOOKED SUCCESSFULLY',
+                        '',
                         style: TextStyle(fontSize: 30),
                       ),
                     )),

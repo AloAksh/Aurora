@@ -16,10 +16,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: (){},
-          icon: const Icon(Icons.arrow_back_ios_new),
-          ),
+        centerTitle: true,
         title:  const Text('PROFILE',),
         actions: const[],
         backgroundColor:const Color.fromARGB(255, 110, 212, 159),
@@ -111,7 +108,7 @@ class _ProfileState extends State<Profile> {
                 child: const Text('Save'),
                 onPressed: () {
                   // Save profile information here
-                   Navigator.pushNamed(context, '/donateDet');
+                   Navigator.pushNamed(context, '/home');
                 },
               ),
             ),

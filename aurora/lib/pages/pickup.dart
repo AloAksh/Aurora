@@ -17,9 +17,18 @@ class PickUp extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'PICKUP PERSONNAL DETAILS',
+                  'PICKUP DETAILS',
                   style: TextStyle(fontSize: 30),
                 )),
+                Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Quantity:',
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
               child: TextFormField(

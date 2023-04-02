@@ -13,6 +13,7 @@ class _ProfileState extends State<DonateDet> {
   String location = '';
   String dietPreference = '';
   
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,7 +120,7 @@ class _ProfileState extends State<DonateDet> {
                 ),
                 child: const Text('Save'),
                 onPressed: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
+                    Navigator.pushNamed(context, '/done');
                 },
               ),
             ),
